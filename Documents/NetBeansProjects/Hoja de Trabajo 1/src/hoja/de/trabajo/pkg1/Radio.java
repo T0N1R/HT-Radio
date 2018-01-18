@@ -8,6 +8,7 @@ package hoja.de.trabajo.pkg1;
 /**
  *
  * @author Antonio
+ * @author Raul Monzon
  */
 
 public class Radio implements RadioI {
@@ -16,10 +17,25 @@ public class Radio implements RadioI {
 	private float frecFM;
 	private boolean estado; //apagado o encendido
 	private boolean frecuencia; //AM O FM
-
+        int[] favoritosAM = new int[11];
+        float[] favoritosFM = new float[11];
+	private String estacion;
 	
 	
-	
+        /**
+         * @return the estacion
+         */
+        public String getEstacion(){
+            return estacion;
+        }
+        
+        /**
+         * @param estacion the estacion to set
+         */
+        public void setEstacion(String estacion){
+            this.estacion = estacion;
+        }
+        
 	/**
 	 * @return the frecAM
 	 */
@@ -81,9 +97,11 @@ public class Radio implements RadioI {
 	 * Si estado es false, la radio estará en FM, será AM si es true
 	 */
 	@Override
-	public void frecAdelante() {
+	public String frecAdelante() {
 		// TODO Auto-generated method stub
 		
+                String respuestaAdelante = "";
+                
 		//AM
 		if(frecuencia == true) {
 			frecAM = frecAM + 10;
@@ -96,7 +114,7 @@ public class Radio implements RadioI {
 				frecAM = 530;
 			}
 			
-			System.out.println("frecuencia: " + frecAM);
+                        estacion = String.valueOf(frecAM);
 		}
 		
 		
@@ -111,14 +129,16 @@ public class Radio implements RadioI {
 			if(frecFM == 108.1) {
 				frecFM = (float) 87.9;
 			}
-			System.out.println("frecuencia: " + frecFM);
+                        estacion = String.valueOf(frecFM);
 		}
+            return estacion;
 	}
 
 	@Override
-	public void frecAtras() {
+	public String frecAtras() {
 		// TODO Auto-generated method stub
 		
+                String respuestaAtras = "";
 		//AM
 		if(frecuencia == true) {
 			frecAM = frecAM - 10;
@@ -131,7 +151,7 @@ public class Radio implements RadioI {
 				frecAM = 1610;
 			}
 			
-			System.out.println("frecuencia: " + frecAM);
+			respuestaAtras = "frecuencia: " + frecAM;
 		}
 		
 		
@@ -146,12 +166,13 @@ public class Radio implements RadioI {
 			if(frecFM == 87.7) {
 				frecFM = (float) 107.9;
 			}
-			System.out.println("frecuencia: " + frecFM);
+			respuestaAtras = "frecuencia: " + frecFM;
 		}
+            return respuestaAtras;
 	}
 
 	@Override
-	public void prender() {
+	public boolean prender() {
 		// TODO Auto-generated method stub
 		estado = true;
 		if(frecuencia == true) {
@@ -161,14 +182,16 @@ public class Radio implements RadioI {
 		if(frecuencia == false) {
 			System.out.println("La radio está encendida, la frecuencia es: " + frecFM);
 		}
+            return true;
 		
 	}
 
 	@Override
-	public void apagar() {
+	public boolean apagar() {
 		// TODO Auto-generated method stub
 		estado = false;
 		System.out.println(" - - - - ");
+            return false;
 	}
 
 	@Override
@@ -187,23 +210,70 @@ public class Radio implements RadioI {
 		
 	}
 
-	@Override
-	public void guardarFrecAm() {
-		// TODO Auto-generated method stub
-		
-	}
+
+
+
 
 	@Override
-	public void guardarFrecFm() {
+	public String mostrarEstacion() {
 		// TODO Auto-generated method stub
-		
+                
+                if(frecuencia = true){
+                    estacion = String.valueOf(frecAM);
+                }
+                
+                if(frecuencia = false){
+                    estacion = String.valueOf(frecFM);
+                }
+            return estacion;
 	}
 
-	@Override
-	public void mostrarEstacion() {
-		// TODO Auto-generated method stub
-		
-		System.out.println(frecuencia);
-	}
+    @Override
+    public void guardarEstacionActual(int pos) {
+        if(frecuencia = true){
+            favoritosAM[pos]= frecAM;
+        }
+        
+        if(frecuencia = false){
+            favoritosFM[pos]= frecFM;
+        }
+    }
+
+    @Override
+    public String obtenerEstacion(int pos) {
+        if(frecuencia = true){
+            estacion = String.valueOf(favoritosAM[pos]);
+        }
+        
+        if(frecuencia = false){
+            estacion = String.valueOf(favoritosFM[pos]);
+        }
+            return estacion;
+    }
+
+    @Override
+    public boolean estaPrendido() {
+        if (estado = true){
+            System.out.println("la radio esta encendida");
+        }
+        
+        if (estado = false){
+            System.out.println("la radio esta apagada");
+        }
+            return estado;
+    }
+
+    @Override
+    public String obtenerEstado() {
+        String frecuenciaAoF = "";
+        if (frecuencia = true){
+            frecuenciaAoF = "AM";
+        }
+        
+        if (frecuencia = false){
+            frecuenciaAoF = "FM";
+        }
+            return frecuenciaAoF;
+    }
 
 }

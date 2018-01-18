@@ -8,26 +8,33 @@ package hoja.de.trabajo.pkg1;
 /**
  *
  * @author Antonio
+ * @author Raul Monzon
  */
 
 public interface RadioI {
 	
 	
-	public void frecAdelante();
+	public String frecAdelante();
 	
-	public void frecAtras();
+	public String frecAtras();
 	
-	public void prender();
+	public  boolean prender();
 	
-	public void apagar();
+	public boolean apagar();
 	
 	public void cambioFrecuencia();
+        
+        public void guardarEstacionActual(int pos); //guarda la estacion actual en la posicion "pos"
+        
+        public String obtenerEstacion(int pos); //para obtner la estacion guardada en al posicion "pos"
+        
+        public String mostrarEstacion(); //obtener la estacion atual que la radio sintoniza
+        
+        public boolean estaPrendido(); //conocer estado de la radio (saber si la radio esta prendida)
+        
+        public String obtenerEstado(); //devolver "AM" o "FM"
 	
-	public void guardarFrecAm();
-	
-	public void guardarFrecFm();
-	
-	public void mostrarEstacion();
+
 
 }
 
