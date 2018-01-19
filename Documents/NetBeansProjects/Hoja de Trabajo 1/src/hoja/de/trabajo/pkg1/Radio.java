@@ -18,7 +18,7 @@ public class Radio implements RadioI {
 	private int frecAM = 530; 
 	private float frecFM = (float)87.9;
 	private boolean estado = true; //apagado o encendido
-	private String frecuencia = "AM"; //AM O FM
+	private String frecuencia = "FM"; //AM O FM
         int[] favoritosAM = new int[12];
         float[] favoritosFM = new float[12];
 	private String estacion;
