@@ -16,6 +16,7 @@ package hoja.de.trabajo.pkg1;
 public interface RadioI {
 	
 	
+    
 	public String frecAdelante(); //avanza en la frecuencia actual
 	
 	public String frecAtras(); //retrocede en la frecuencia actual
