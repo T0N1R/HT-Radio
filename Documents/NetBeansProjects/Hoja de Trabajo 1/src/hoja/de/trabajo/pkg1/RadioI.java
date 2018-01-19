@@ -7,22 +7,24 @@ package hoja.de.trabajo.pkg1;
 
 /**
  *
- * @author Antonio
- * @author Raul Monzon
+ * @author Antonio #17273
+ * @author Raul Monzon #17014
+ * Algoritmos y Estructura de Datos
+ * 19/1/2018
  */
 
 public interface RadioI {
 	
 	
-	public String frecAdelante();
+	public String frecAdelante(); //avanza en la frecuencia actual
 	
-	public String frecAtras();
+	public String frecAtras(); //retrocede en la frecuencia actual
 	
-	public  boolean prender();
+	public  boolean prender(); //enciende el radio
 	
-	public boolean apagar();
+	public boolean apagar(); //apaga el radio
 	
-	public String cambioFrecuencia();
+	public String cambioFrecuencia();  //cambia entre AM y FM
         
         public void guardarEstacionActual(int pos); //guarda la estacion actual en la posicion "pos"
         

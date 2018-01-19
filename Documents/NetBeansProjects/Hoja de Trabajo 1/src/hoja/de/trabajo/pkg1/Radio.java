@@ -7,8 +7,10 @@ package hoja.de.trabajo.pkg1;
 
 /**
  *
- * @author Antonio
- * @author Raul Monzon
+ * @author Antonio  #17273
+ * @author Raul Monzon  #17014
+ * Algoritmos y Estructura de Datos
+ * 19/1/2018
  */
 
 public class Radio implements RadioI {
@@ -95,7 +97,8 @@ public class Radio implements RadioI {
 
 
 	/**
-	 * Si estado es false, la radio estará en FM, será AM si es true
+	 * cambia la frecuencia hacia adelante
+         * Si estado es false, la radio estará en FM, será AM si es true
          * @return estacion
 	 */
 	@Override
@@ -136,6 +139,10 @@ public class Radio implements RadioI {
             return estacion;
 	}
 
+        /**
+         * cambia la frecuencia hacia atras
+         * @return estacion
+         */
 	@Override
 	public String frecAtras() {
 		// TODO Auto-generated method stub
@@ -173,6 +180,10 @@ public class Radio implements RadioI {
             return respuestaAtras;
 	}
 
+        /**
+         * enciende la radio y muestra la estacion y frecuencia de la radio
+         * @return true
+         */
 	@Override
 	public boolean prender() {
 		// TODO Auto-generated method stub
@@ -190,6 +201,11 @@ public class Radio implements RadioI {
 		
 	}
 
+        /**
+         * apaga la radio. quita la frecuencia y estacion de la pantalla y muestra 
+         * ------
+         * @return false 
+         */
 	@Override
 	public boolean apagar() {
 		// TODO Auto-generated method stub
@@ -198,7 +214,10 @@ public class Radio implements RadioI {
             return false;
 	}
 
-	
+	/**
+         * cambia la frecuencia entre AM y FM
+         * @return (String)frecuencia
+         */
 	public String cambioFrecuencia() {
 		// TODO Auto-generated method stub
 	

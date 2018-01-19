@@ -7,8 +7,11 @@ package hoja.de.trabajo.pkg1;
 
 /**
  *
- * @author Antonio Reyes
- * @author Raul Monzon
+ * @author Antonio Reyes  #17273
+ * @author Raul Monzon  #17014
+ * Algoritmos y Estructura de Datos
+ * 19/1/2018
+ * 
  */
 public class RadioGUI extends javax.swing.JFrame {
 
