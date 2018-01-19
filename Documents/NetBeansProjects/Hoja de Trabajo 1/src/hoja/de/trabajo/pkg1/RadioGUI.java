@@ -241,7 +241,7 @@ public class RadioGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(atras)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(adelante))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,9 +292,9 @@ public class RadioGUI extends javax.swing.JFrame {
                             .addComponent(jButton3)
                             .addComponent(jButton4))
                         .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton5)
-                            .addComponent(jButton6))
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton8)
@@ -313,12 +313,13 @@ public class RadioGUI extends javax.swing.JFrame {
                             .addComponent(atras)
                             .addComponent(adelante))
                         .addGap(16, 16, 16)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(oyendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cambiarAoF)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addGap(4, 4, 4)))
+                                .addGap(4, 4, 4))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(oyendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cambiarAoF)))
                         .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(oyendoAoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -343,11 +344,15 @@ public class RadioGUI extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(9));
+
         
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(5));
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void powerONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerONActionPerformed
@@ -368,6 +373,8 @@ public class RadioGUI extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(7));
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void oyendoAoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oyendoAoFActionPerformed
@@ -381,34 +388,49 @@ public class RadioGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(1));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(2));
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(3));
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(4));
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(6));
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(8));
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(10));
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+                oyendo.setText(radio.obtenerEstacion(11));
+
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
@@ -425,7 +447,8 @@ public class RadioGUI extends javax.swing.JFrame {
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
         // TODO add your handling code here:
-        radio.guardarEstacionActual(Integer.parseInt(espacio.getText())-1);
+        radio.guardarEstacionActual(Integer.parseInt(espacio.getText()));
+        espacio.setText("");
     }//GEN-LAST:event_guardarActionPerformed
 
     private void oyendoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oyendoActionPerformed
@@ -445,6 +468,8 @@ public class RadioGUI extends javax.swing.JFrame {
         radio.apagar();
         oyendo.setText("----------");
         oyendoAoF.setText("----------");
+        espacio.setText("");
+        estado.setText("Apagado");
         
     }//GEN-LAST:event_powerOFFActionPerformed
 
