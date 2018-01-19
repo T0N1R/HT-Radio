@@ -22,7 +22,7 @@ public interface RadioI {
 	
 	public boolean apagar();
 	
-	public void cambioFrecuencia();
+	public String cambioFrecuencia();
         
         public void guardarEstacionActual(int pos); //guarda la estacion actual en la posicion "pos"
         
