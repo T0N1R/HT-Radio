@@ -283,11 +283,11 @@ public class Radio implements RadioI {
     @Override
     public boolean estaPrendido() {
         if (estado = true){
-            //System.out.println("la radio esta encendida");
+            System.out.println("la radio esta encendida");
         }
         
         if (estado = false){
-            //System.out.println("la radio esta apagada");
+            System.out.println("la radio esta apagada");
         }
             return estado;
     }
